@@ -1,0 +1,13 @@
+version: '3.4'
+
+services:
+  book-manager:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - book-manager-data:/app/build
+    stdin_open: true  # Keep stdin open to receive input
+
+volumes:
+  book-manager-data:
